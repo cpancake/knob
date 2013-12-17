@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{#if title}}{{title}} | {{/if}}{{site_name}}</title>
+	<link href='/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='/css/jquery.tagsinput.css' rel='stylesheet'>
+	<link href='/css/common.css' rel='stylesheet'>
+	<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+	<script src='/js/bootstrap-fileupload.min.js'></script>
+	<script src='/js/jquery.tagsinput.min.js'></script>
+	<script src='/js/main.js'></script>
+</head>
+<body>
+	<div class='container container-full'>
+		<nav class='navbar navbar-default navbar-static-top' id='main-nav'>
+			<div class='navbar-header'>
+				<a class='navbar-brand' href='/'>{{site_name}}</a>
+			</div>
+			<div class='collapse navbar-collapse'>
+				<ul class='nav navbar-nav'>
+					<li><a href='/user/profile'>My Account</a></li>
+					<li><a href='/posts'>Posts</a></li>
+				</ul>			
+				<ul class='nav navbar-nav pull-right'>
+					<li><a href='/post/new'>New Post</a></li>
+				</ul>
+			</div>
+
+		</nav>
+		<div id='main'>
+			{{{body}}}
+		</div>
+	</div>
+</body>
+</html>

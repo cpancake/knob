@@ -1,0 +1,35 @@
+<div class='sidebar col-lg-2'>
+	{{> search}}
+	<h4>Tags</h4>
+	<div class='row'>
+		<ul id='tag-list'>
+			{{#each tags}}{{#with this}}<li><a href='/search?q={{name}}'>{{name}}</a> <span class='tag-count'>{{count}}</span></li>{{/with}}{{/each}}
+		</ul>
+	</div>
+	{{#if time}}
+	<div class='row' style='padding-left:15px;'>
+		Search generated in {{time}} seconds.
+	</div>
+	{{/if}}
+</div>
+<div class='col-lg-10' id='search-container'>
+	<div class='row' style='overflow-x:hidden;'>
+		{{#if error}}{{error}}{{/if}}
+		{{#if none_found}}
+			No posts were found under those tags.
+		{{/if}}
+		{{#if posts}}
+		{{#each posts}}<div class='row'>{{#each this}}{{#with this}}
+		<div class='col-lg-2 list-thumb'>
+			<a href='/post/{{id}}'><img src='{{thumbnail}}'></a>
+		</div>
+		{{/with}}{{/each}}</div>{{/each}}
+		{{/if}}
+	</div>
+	<div class='row' id='search-container'>
+		{{#each pages}}<a class='btn btn-primary' href='{{#if ../posts_page}}/posts?page={{this}}{{else}}/search?q={{../../query}}&page={{this}}{{/if}}'>{{this}}</a>{{/each}}
+		{{#if pages_end}}<div id='page-sep'>...</div>
+			{{#each pages_end}}<a class='btn btn-primary' href='{{#if ../posts_page}}/posts?page={{this}}{{else}}/search?q={{../../query}}&page={{this}}{{/if}}'>{{this}}</a>{{/each}}
+		{{/if}}
+	</div>
+</div>

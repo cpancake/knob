@@ -1,0 +1,37 @@
+<h2>Register</h2>
+{{#if errors}}
+<div class='alert alert-danger alert-dismissable'>
+	<strong>Error:</strong>
+	<ul>
+	{{#each errors}}
+		<li>{{this}}</li>
+	{{/each}}
+	</ul>
+</div>
+{{/if}}
+<form class='form-horizontal' method='post'>
+	<div class='form-group'>
+		<label for='nickname-input' class='col-lg-1 control-label'>Nickname</label>
+		<div class='col-lg-3'>
+			<input type='text' class='form-control' id='nickname-input' placeholder='Nickname' name='nickname'>
+		</div>
+	</div>
+	<div class='form-group'>
+		<label for='password-input' class='col-lg-1 control-label'>Password</label>
+		<div class='col-lg-3'>
+			<input type='password' class='form-control' id='password-input' placeholder='Password' name='password'>
+		</div>
+	</div>
+	<div class='form-group'>
+		<label for='repassword-input' class='col-lg-1 control-label'>Confirm Password</label>
+		<div class='col-lg-3'>
+			<input type='password' class='form-control' id='repassword-input' placeholder='Password' name='repassword'>
+		</div>
+	</div>
+	<div class='form-group'>
+		<div class='col-lg-3 col-lg-offset-1'>
+			<input type='submit' value='Register' class='btn btn-primary'>
+			<a href='/user/login' class='btn btn-link'>Login</a>
+		</div>
+	</div>
+</form>

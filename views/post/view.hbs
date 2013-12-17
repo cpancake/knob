@@ -1,0 +1,19 @@
+<div class='sidebar col-lg-2'>
+	{{> search}}
+	<h4>Tags</h4>
+	<div class='row'>
+		<ul id='tag-list'>
+			{{#each tags}}{{#with this}}<li><a href='/search?q={{name}}'>{{name}}</a> <span class='tag-count'>{{count}}</span></li>{{/with}}{{/each}}
+		</ul>
+	</div>
+	<div class='row'>
+		<ul id='image-info'>
+			<li><strong>Uploader:</strong> {{uploader}}</li>
+			<li><strong>Posted:</strong> {{date}}</li>
+			<li><strong>Actions:</strong> <a href='/post/edit/{{id}}'>Edit Tags</a></li>
+		</ul>
+	</div>
+</div>
+<div class='col-lg-10' id='content-container'>
+	{{{content}}}
+</div>

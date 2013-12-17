@@ -1,0 +1,25 @@
+{
+  "name": "knob",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./server",
+  "dependencies": {
+    "colors": "*",
+    "express": "3.4.x",
+    "request": "2.27.x",
+    "handlebars": "1.1.x",
+    "hbs": "2.4.x",
+    "passport": "0.1.x",
+    "jugglingdb": "0.2.x",
+    "jugglingdb-postgres": "0.0.x",
+    "nan": "0.6.x",
+    "bcrypt": "0.7.x",
+    "dateformat": "*",
+    "escape-html": "1.0.x",
+    "datetime": "0.0.x",
+    "zlib": "1.0.x"
+  },
+  "engines": {
+    "node": ">= 0.10.4"
+  }
+}
